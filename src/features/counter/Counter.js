@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  decrement,
+  decrement, reset,
   increment,
   incrementByAmount,
   incrementAsync,
@@ -24,6 +24,7 @@ export function Counter() {
         >
           +
         </button>
+
         <span className={styles.value}>{count}</span>
         <button
           className={styles.button}
@@ -32,6 +33,15 @@ export function Counter() {
         >
           -
         </button>
+        <br />
+        <button
+          className={styles.button}
+          onClick={() =>
+            dispatch(reset())
+          }
+        >
+          Reset
+            </button>
       </div>
       <div className={styles.row}>
         <input
