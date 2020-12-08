@@ -1,12 +1,16 @@
 import React from 'react';
-import { Counter } from './features/counter/Counter';
+import { Product } from './features/counter/Product';
+import {Basket} from "./features/counter/Basket"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Counter />
+        <h1>T-Shirt Store</h1>
+        <h3>Developed Using Redux Toolkit</h3>
+        <Product />
+        <Basket/>
         </header>
     </div>
   );
